@@ -32,8 +32,15 @@ public class BioskopWithScanner09modif {
                     kolom = sc.nextInt();
                     sc.nextLine();
 
-                    penonton[baris - 1][kolom - 1] = nama;
-                    System.out.println("kursi di baris ke- " + baris + " kolom ke- " + kolom + " dipesan atas nama " + nama);
+                    if (baris <= 0 || baris > 4 || kolom <= 0 || kolom > 2){
+                        System.out.println("Maaf kursi tidak tersedia");
+                        System.out.println("Mohon masukkan baris antara (1-4) dan kolom antara (1-2)");
+                        continue;
+                    }else {
+                        penonton[baris - 1][kolom - 1] = nama;
+                        System.out.println("kursi di baris ke- " + baris + " kolom ke- " + kolom + " dipesan atas nama " + nama);
+                    }
+                    
                     System.out.println("----------------------------------");
                     System.out.print("Input penonton lainnya? (y/n): ");
                     next = sc.nextLine();
