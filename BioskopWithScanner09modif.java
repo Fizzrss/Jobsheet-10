@@ -36,7 +36,11 @@ public class BioskopWithScanner09modif {
                         System.out.println("Maaf kursi tidak tersedia");
                         System.out.println("Mohon masukkan baris antara (1-4) dan kolom antara (1-2)");
                         continue;
-                    }else {
+                    } 
+                    if (penonton[baris - 1][kolom-1] != null) {
+                        System.out.println("Maaf kursi di baris " + baris + " kolom " + kolom + " sudah terisi");
+                        continue;
+                    } else {
                         penonton[baris - 1][kolom - 1] = nama;
                         System.out.println("kursi di baris ke- " + baris + " kolom ke- " + kolom + " dipesan atas nama " + nama);
                     }
