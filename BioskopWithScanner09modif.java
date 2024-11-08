@@ -58,13 +58,23 @@ public class BioskopWithScanner09modif {
                 for (int i = 0; i < penonton.length; i++) {
                     for (int j = 0; j < penonton[i].length; j++) {
                         String namaPenonton = penonton[i][j];
-                        System.out.println("Baris ke- " + (i + 1) + " kolom ke- " + (j + 1) + ": " + namaPenonton);
+                        System.out.print("Baris ke- " + (i + 1) + " kolom ke- " + (j + 1) + ": ");
+                        if (namaPenonton == null) {
+                            System.out.print("***");
+                        } else {
+                            System.out.print(namaPenonton);
+                        }
+                        System.out.println();
                     }
                 }
                 System.out.println("\n--- Denah Tempat duduk penonton ---");
                 for (int i = 0; i < penonton.length; i++) {
                     for (int j = 0; j < penonton[i].length; j++) {
-                        System.out.print(penonton[i][j] + "\t");
+                        if (penonton[i][j] == null) {
+                            System.out.print("***" + "\t");
+                        } else {
+                            System.out.print(penonton[i][j] + "\t");
+                        }
                     }
                     System.out.println();
                 }
